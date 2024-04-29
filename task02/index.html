@@ -21,11 +21,11 @@
     </header>
     <main>
         <div id="app" class="inside">
-            <h2 v-text="'Directives for Vue ' + (vueVersion - 1)">
+            <h2 v-once="'Directives for Vue ' + (vueVersion - 1)">
                 Directives for Vue {{ vueVersion }}
             </h2>
-            <div class="intro" v-text="text"></div>
-            <p>
+            <div class="intro" v-html="text"></div>
+            <p v-pre>
                 Sometimes v-text is better than {{ 'Some text' }} or
                 {{myDataProperty}}
             </p>
