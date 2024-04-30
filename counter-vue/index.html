@@ -16,12 +16,15 @@
                 <h1>Counter</h1>
                 <small>(click the white area)</small>
             </div>
-            <button>Reset</button>
+            <button v-on:click="count = 0">Reset</button>
         </header>
-        <main>
+        <main v-on:click="count++" :style="`--counter: ${count}%`">
             <label id="counter">{{ count }}</label>
         </main>
     </div>
+
+
+
     <script src="https://unpkg.com/vue@latest"></script>
     <script src="script.js"></script>
 </body>
