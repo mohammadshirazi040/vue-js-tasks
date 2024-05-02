@@ -25,18 +25,18 @@
             <table>
                 <thead>
                     <tr>
-                        <th v-for="columnName in Object.keys(books[0])" :key="columnName">
+                        <th v-for="columnName in tableColumnHeadNames" :key="columnName">
                             {{ columnName }}
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="{ title, isbn, author, publisher, price, numPages } of books" :key="isbn">
-                        <td>{{ title }}</td>
-                        <td>{{ isbn }}</td>
-                        <td>{{ author }}</td>
-                        <td>{{ publisher }}</td>
-                        <td><span class="strike">{{ price }}</span></td>
+                        <td v-text="title"></td>
+                        <td v-text="isbn"></td>
+                        <td v-text="author"></td>
+                        <td v-text="publisher"></td>
+                        <td><span class="strike">{{ price }}</span>{{ getDiscount(price, 20) }}</td>
                         <td>{{ numPages }}</td>
                     </tr>
                 </tbody>
