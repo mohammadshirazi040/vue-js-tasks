@@ -25,22 +25,17 @@
             <table>
                 <thead>
                     <tr>
-                        <th>title</th>
-                        <th>isbn</th>
-                        <th>author</th>
-                        <th>publisher</th>
-                        <th>price</th>
-                        <th>numPages</th>
+                        <th v-for="book in Object.keys(books[0])" :key="book">{{ book }}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>High Performance Mobile Web</td>
-                        <td>9781491912553</td>
-                        <td>Maximiliano Firtman</td>
-                        <td>O'Reilly Media</td>
-                        <td>$7.00</td>
-                        <td>326</td>
+                    <tr v-for="{ title, isbn, author, publisher, price, numPages } of books " :key="isbn">
+                        <td v-text="title"> </td>
+                        <td v-text="isbn"></td>
+                        <td v-text="author"></td>
+                        <td v-text="publisher"></td>
+                        <td v-text="price"></td>
+                        <td v-text="numPages"></td>
                     </tr>
                 </tbody>
             </table>
