@@ -3,12 +3,20 @@ Vue.createApp({
     return {
       text: "Hello Title",
       onClassName: "is-active",
+      isToggled: false,
     };
   },
   methods: {
     active() {
-      document.title = this.text;
-      document.body.classList.add(this.onClassName);
+      this.isToggled = !this.isToggled;
+
+      if (this.isToggled) {
+        document.title = this.text;
+        document.body.classList.add(this.onClassName);
+      } else {
+        document.title = "Light Switch";
+        document.body.classList.remove(this.onClassName);
+      }
     },
   },
 }).mount("#app");
