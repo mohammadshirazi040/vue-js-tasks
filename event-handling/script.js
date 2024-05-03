@@ -14,4 +14,11 @@ Vue.createApp({
       ],
     };
   },
+  methods: {
+    removeFruit(fruitToRemove) {
+      this.fruitBasket = this.fruitBasket.filter((fruit) => {
+        return fruit !== fruitToRemove;
+      });
+    },
+  },
 }).mount("#app");
