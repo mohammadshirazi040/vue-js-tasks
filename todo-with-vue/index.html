@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Vue Template -->
+    <div id="app">
+
+        <form>
+
+            <label for="description">Add To Description</label> <br>
+            <input type="text" name="description" id="description" v-model="newDescription" placeholder="Whats up?">
+            <button @click.prevent="addTodo">Add</button>
+
+        </form>
+
+
+        <!-- Filter Button -->
+        <menu>
+
+            <button @click="">All</button>
+            <button @click="">Open</button>
+            <button @click="">Done</button>
+
+        </menu>
+
+        <!-- Todos List -->
+
+        <ul>
+            <li v-for="todo of filterTodos" :key="todo.id">
+                <input type="checkbox" v-model="todo.done" :id="getHtmlId(todo.id)">
+                <label :for="getHtmlId(todo.id)"> {{ todo.description }} {{todo.done}}</label>
+            </li>
+
+        </ul>
+
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
