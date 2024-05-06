@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name Picker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,18 +19,28 @@
             <label for="new-name"> Type a name:
             </label>
             <div class="new-name-wrapper">
-                <input type="text" name="new-name" id="new-name">
-                <button>Add Name</button>
+                <input type="text" name="new-name" id="new-name" v-model="newName">
+                <button @click.prevent="addName" :disabled="newName.length === 0">Add Name</button>
             </div>
-            <button>Pick a name</button>
+            <button @click.prevent="drawName" :disabled="names.length < 2">Pick a name</button>
 
         </form>
 
         <ul>
-            <li>
-                <span>Max</span><button>X</button>
+            <li v-for="(currentName, index) of names" :key="currentName.id">
+                <span> {{ currentName.name }} </span>
+                <button @click="names.splice(index, 1)" class="btn-del">X</button>
             </li>
         </ul>
+
+        <article v-show="isDrawn">
+
+            <h2>Congratulitaion {{ winner }}!</h2>
+            <p>You are the lucky winner</p>
+            <button @click="winner = ''"> Draw Another Name</button>
+            <button @click="reset">Reset and Start New</button>
+
+        </article>
 
 
 
