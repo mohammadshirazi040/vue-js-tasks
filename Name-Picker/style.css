@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: red;
+  width: 100vw;
+}
+
+/* button {
+  padding: 1rem 2rem;
+  background-color: red;
+}
+
+button[disabled] {
+  background-color: rgb(149, 55, 55, 0.1);
+  cursor: default;
+} */
+
+article {
+  margin: 5rem;
+}
