@@ -17,6 +17,7 @@ header p {
   margin-top: 1rem;
   color: white;
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -29,7 +30,8 @@ main {
   align-items: center;
   background-color: aqua;
   width: 100vw;
-  height: 80vh;
+  height: 50vh;
+  position: relative;
 }
 
 form {
@@ -59,10 +61,18 @@ button[disabled] {
 }
 
 article {
-  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  width: 600px;
+  height: 200px;
+  position: absolute;
 }
 
-ul {
+section {
+  background-color: yellow;
+  height: 30vh;
 }
 
 ul li {
@@ -70,6 +80,13 @@ ul li {
   justify-content: center;
   align-items: center;
   list-style: none;
-  background-color: aliceblue;
-  margin: 1rem;
+  background-color: rgb(0, 120, 225);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.btn-del {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
 }

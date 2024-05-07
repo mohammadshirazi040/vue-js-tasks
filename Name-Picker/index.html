@@ -28,15 +28,6 @@
 
             </form>
 
-
-            <ul>
-                <li v-for="(currentName, index) of names" :key="currentName.id">
-                    <span> {{ currentName.name }} </span>
-                    <button @click="names.splice(index, 1)" class="btn-del">X</button>
-                </li>
-            </ul>
-
-
             <article v-show="isDrawn">
 
                 <h2>Congratulitaion {{ winner }}!</h2>
@@ -45,7 +36,22 @@
                 <button @click="reset">Reset and Start New</button>
 
             </article>
+
         </main>
+
+
+        <section>
+            <ul>
+                <li v-for="(currentName, index) of names" :key="currentName.id">
+                    <span> {{ currentName.name }} </span>
+                    <button @click="names.splice(index, 1)" class="btn-del">X</button>
+                </li>
+            </ul>
+
+        </section>
+
+
+
 
 
 
