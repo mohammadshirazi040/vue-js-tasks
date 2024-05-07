@@ -20,9 +20,9 @@
             </label>
             <div class="new-name-wrapper">
                 <input type="text" name="new-name" id="new-name" v-model="newName">
-                <button @click.prevent="addName" :disabled="newName.length === 0">Add Name</button>
             </div>
-            <button @click.prevent="drawName" :disabled="names.length < 2">Pick a name</button>
+            <button class="add-btn" @click.prevent="addName" :disabled="newName.length === 0">Add Name</button>
+            <button class="pick-btn" @click.prevent="drawName" :disabled="names.length < 2">Pick a name</button>
 
         </form>
 

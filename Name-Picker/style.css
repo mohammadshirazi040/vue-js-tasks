@@ -7,17 +7,47 @@
 header {
   background-color: red;
   width: 100vw;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+header p {
+  margin-top: 1rem;
+  color: white;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-/* button {
+.add-btn {
   padding: 1rem 2rem;
   background-color: red;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.pick-btn {
+  padding: 1rem 2rem;
+  background-color: red;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button[disabled] {
   background-color: rgb(149, 55, 55, 0.1);
   cursor: default;
-} */
+}
 
 article {
   margin: 5rem;
