@@ -17,6 +17,21 @@ header p {
   margin-top: 1rem;
   color: white;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  width: 100vw;
+  height: 80vh;
+}
+
 form {
   display: flex;
   justify-content: center;
@@ -38,12 +53,6 @@ form {
   margin: 1rem;
 }
 
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 button[disabled] {
   background-color: rgb(149, 55, 55, 0.1);
   cursor: default;
@@ -51,4 +60,16 @@ button[disabled] {
 
 article {
   margin: 5rem;
+}
+
+ul {
+}
+
+ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: aliceblue;
+  margin: 1rem;
 }
