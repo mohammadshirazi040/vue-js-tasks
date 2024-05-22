@@ -13,44 +13,60 @@
     <!-- Vue Template -->
 
     <div id="app">
-
-        <form>
-
-            <label for="description">Add To Description</label> <br>
-            <input type="text" name="description" id="description" v-model="newDescription" placeholder="Whats up?">
-            <button @click.prevent="addTodo">Add</button>
-
-        </form>
+        <div class="border">
 
 
-        <!-- Filter Button -->
+            <header>
+                <form>
 
-        <form>
+                    <label class="description" for="description">Add To Description</label> <br>
+                    <input class="input-text" type="text" name="description" id="description" v-model="newDescription"
+                        placeholder="Whats up?">
+                    <button @click.prevent="addTodo">Add</button>
 
-            <label for="all">All</label>
-            <input type="radio" id="all" name="filter" value="all" v-model="activeFilter">
+                </form>
 
-            <label for="open">Open</label>
-            <input type="radio" id="open" name="filter" value="open" v-model="activeFilter">
-
-            <label for="done">Done</label>
-            <input type="radio" id="done" name="filter" value="done" v-model="activeFilter">
-
-        </form>
+            </header>
 
 
-        <!-- Todos List -->
 
-        <ul>
+            <!-- Filter Button -->
+            <main>
 
-            <li v-for=" todo of filterTodos" :key="todo.id">
-                <input type="checkbox" v-model="todo.done" :id="getHtmlId(todo.id)">
-                <label :for="getHtmlId(todo.id)"> {{ todo.description }}</label>
-            </li>
+                <div>
+                    <form>
 
-        </ul>
+                        <label class="todo-op" for="all">All</label>
+                        <input class="radio" type="radio" id="all" name="filter" value="all" v-model="activeFilter">
+
+                        <label class="todo-op" for="open">Open</label>
+                        <input class="radio" type="radio" id="open" name="filter" value="open" v-model="activeFilter">
+
+                        <label class="todo-op" for="done">Done</label>
+                        <input class="radio" type="radio" id="done" name="filter" value="done" v-model="activeFilter">
+
+                    </form>
+
+                </div>
+
+                <!-- Todos List -->
+
+                <ul>
+
+                    <li v-for=" todo of filterTodos" :key="todo.id">
+                        <input class="checkbox" type="checkbox" v-model="todo.done" :id="getHtmlId(todo.id)">
+                        <label :for="getHtmlId(todo.id)"> {{ todo.description }}</label>
+                    </li>
+
+                </ul>
+
+        </div>
 
 
+
+
+
+        </main>
     </div>
 
 

@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(https://images.pexels.com/photos/957040/night-photograph-starry-sky-night-sky-star-957040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.border {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  border: 2px solid white;
+}
+
+.description {
+  top: 0;
+  font-size: 3rem;
+  color: white;
+}
+
+.input-text {
+  margin-top: 2rem;
+  width: 100%;
+  height: 50px;
+}
+
+button {
+  margin: 2rem 0;
+  width: 100%;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.731);
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.todo-op {
+  font-size: 2rem;
+  color: white;
+}
+.radio {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  margin: 1rem;
+}
+
+ul > li {
+  background-color: rgb(255, 255, 255);
+  list-style: none;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 5rem;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+}
